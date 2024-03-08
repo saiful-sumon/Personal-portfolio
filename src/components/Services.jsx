@@ -6,7 +6,7 @@ const Services = () => {
     <div className="section bg-tertiary" id="services">
       <div className="container mx-auto">
         {/* section title  */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center mt-8 lg:-mt-10">
           <h2 className=" section-title">What I Do For Clients</h2>
           <p className="mb-8 text-[15px] leading-[1.2]">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod,{" "}

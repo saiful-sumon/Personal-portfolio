@@ -11,13 +11,13 @@ const About = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="object-cover h-full w-[350px] md:mx-auto lg:mx-0 rounded-3xl"
+            className="object-cover h-full w-[350px] md:mx-auto lg:mx-0 rounded-3xl -mb-10"
             src={aboutImg}
             alt=""
           />
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <div className="flex flex-col">
-              <h2 className="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3 before:content-about relative before:absolute before:opacity-40 before:-top-[3rem] before:hidden before:lg:block ">
+              <h2 className="text-3xl lg:text-4xl font-medium lg:font-extrabold mb-3  before:content-about relative before:absolute before:opacity-40 before:-top-[3rem] before:hidden before:lg:block ">
                 Saiful Islam
               </h2>
               <p className="mb-3 text-accent">
@@ -25,7 +25,7 @@ const About = () => {
               </p>
               <hr className="mb-4 opacity-5" />
               <p className="mb-8 text-[16px] leading-[1.3]">
-                Welcome to my profile! I'm a Frontend Web Developer and
+                Welcome to my portfolio, I'm a Frontend Web Developer and
                 WordPress Expert. As a part of my work, I will bring the website
                 to life by using HTML CSS, JavaScript, Bootstrap, Tailwind CSS,
                 and React JS. I specialize in creating custom, user-friendly
@@ -36,7 +36,13 @@ const About = () => {
                 stunning but also easy to use and navigate.
               </p>
             </div>
-            <Link to="contact" smooth={true} spy={true} duration={500} className=" transition-all duration-300 ">
+            <Link
+              to="contact"
+              smooth={true}
+              spy={true}
+              duration={500}
+              className=" transition-all duration-300 "
+            >
               <button className="btn btn-md bg-accent hover:bg-accent-hover transition-all rounded-lg">
                 Contact Me
               </button>

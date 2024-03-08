@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import image from "../assets/img/ss.jpg";
+import image from "../assets/img/web1.png";
 
 const Hero = () => {
   return (
@@ -25,7 +25,7 @@ const Hero = () => {
               to="services"
               smooth={true}
               spy={true}
-              duration={500}
+              duration={1000}
               className=" transition-all duration-300 "
             >
               <button className="btn btn-md rounded-lg bg-accent hover:bg-accent-hover md:btn-lg transition-all">
@@ -36,7 +36,7 @@ const Hero = () => {
           {/* right side  */}
           <div className="hidden lg:flex flex-1 justify-end items-end h-full">
             <img
-              className=" w-1/2 rounded-3xl overflow-hidden"
+              className=" w-2/3 rounded-3xl overflow-hidden"
               src={image}
               alt=""
             />

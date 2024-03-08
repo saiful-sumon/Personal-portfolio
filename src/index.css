@@ -28,6 +28,10 @@
   .btn {
     @apply py-4 px-7 font-medium text-white flex items-center justify-center rounded-sm hover:bg-accent-hover transition-all;
   }
+
+  .p-btn{
+    @apply py-4 px-7 font-medium text-white flex items-center justify-center rounded-sm  hover:scale-125 transition-all;
+  }
   .btn-lg {
     @apply h-[54px];
   }
@@ -35,7 +39,7 @@
     @apply h-[48px];
   }
   .btn-sm {
-    @apply h-[40px] py-4 px-4;
+    @apply h-[40px] ;
   }
   .input {
     @apply bg-secondary text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-accent;
@@ -44,6 +48,6 @@
     @apply bg-secondary resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1 focus:outline-accent;
   }
   .active {
-    @apply text-accent;
+    @apply text-accent scale-150 transition-all;
   }
 }

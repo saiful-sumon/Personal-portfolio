@@ -1,6 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useFormik } from "formik";
 import React, { useRef } from "react";
+import Swal from "sweetalert2";
 import { FromSchema } from "./FormSchema";
 import { social } from "./data";
 
@@ -24,10 +25,30 @@ const Contact = () => {
         })
         .then(
           () => {
-            alert("SUCCESS!");
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+              },
+            });
+            Toast.fire({
+              icon: "success",
+              title: "Message has been sent",
+            });
           },
           (error) => {
-            alert("FAILED...", error.text);
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              showConfirmButton: false,
+              timer: 3000,
+              text: "Something went wrong!",
+            });
           }
         );
 
@@ -40,7 +61,7 @@ const Contact = () => {
       id="contact"
       className="py-16 lg:h-[100vh] lg:section bg-gradient-to-b from-black to-gray-800"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-[108px]">
         <div className="flex flex-col items-center lg:flex-row gap-y-32">
           {/* text  */}
           <div className=" flex flex-1">
